@@ -1,15 +1,20 @@
 import * as React from 'react';
 import Box from '@mui/material/Box';
-import Chip from '@mui/material/Chip';
 import Button from '@mui/material/Button';
 import Grid from '@mui/material/Grid';
-import Stack from '@mui/material/Stack';
 import Divider from '@mui/material/Divider';
 import Typography from '@mui/material/Typography';
+import Table from '@mui/material/Table';
+import TableBody from '@mui/material/TableBody';
+import TableCell from '@mui/material/TableCell';
+import TableContainer from '@mui/material/TableContainer';
+import TableRow from '@mui/material/TableRow';
+import Paper from '@mui/material/Paper';
+
 
 function ProductItem(props) {
   return (
-    <Box sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}>
+    <Box sx={{ width: '100%', maxWidth: 360, bgcolor: 'LightPink' }}>
       <Box sx={{ my: 3, mx: 2 }}>
         <Grid container alignItems="center">
           <Grid item xs>
@@ -19,25 +24,55 @@ function ProductItem(props) {
           </Grid>
           <Grid item>
             <Typography gutterBottom variant="h6" component="div">
-              $1.50
+              Free
             </Typography>
           </Grid>
         </Grid>
         <Typography color="text.secondary" variant="body2">
-          {props.family} {props.genus} {props.order}
+          {props.order} {props.family} {props.genus} 
         </Typography>
       </Box>
       <Divider variant="middle" />
-      <Box sx={{ m: 2 }}>
+      <Box sx={{ m: 2 }}> 
         <Typography gutterBottom variant="body1">
-          Select type
+          Nutritional Information (per 100g)
         </Typography>
-        <Stack direction="row" spacing={1}>
-          <Chip label="Extra Soft" />
-          <Chip color="primary" label="Soft" />
-          <Chip label="Medium" />
-          <Chip label="Hard" />
-        </Stack>
+        <TableContainer component={Paper}>
+      <Table sx={{ minWidth: 130,  bgcolor:'MistyRose'}} aria-label="caption table" >
+        <TableBody>
+            <TableRow key='Calories' >
+              <TableCell component="th" scope="row">
+                Calories
+              </TableCell>
+              <TableCell align="justify">{props.nutritions.calories}g</TableCell>
+            </TableRow>
+            <TableRow key='Carbohydrates'>
+              <TableCell component="th" scope="row">
+                Carbohydrates 
+              </TableCell>
+              <TableCell align="justify">{props.nutritions.carbohydrates}g</TableCell>
+            </TableRow>
+            <TableRow key='Protein'>
+              <TableCell component="th" scope="row">
+                Protein 
+              </TableCell>
+              <TableCell align="justify">{props.nutritions.protein}g</TableCell>
+            </TableRow>
+            <TableRow key='Fat'>
+              <TableCell component="th" scope="row">
+                Fat 
+              </TableCell>
+              <TableCell align="justify">{props.nutritions.fat}g</TableCell>
+            </TableRow>
+            <TableRow key='Sugar'>
+              <TableCell component="th" scope="row">
+                Sugar 
+              </TableCell>
+              <TableCell align="justify">{props.nutritions.sugar}g</TableCell>
+            </TableRow>
+        </TableBody>
+      </Table>
+    </TableContainer>
       </Box>
       <Box sx={{ mt: 3, ml: 1, mb: 1 }}>
         <Button>Add to cart</Button>
@@ -45,5 +80,6 @@ function ProductItem(props) {
     </Box>
   );
 }
+
 
 export default ProductItem;

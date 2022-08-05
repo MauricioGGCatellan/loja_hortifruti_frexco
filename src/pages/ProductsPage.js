@@ -14,7 +14,7 @@ function ProductsPage() {
             {console.log(data);
             setFruits(data);
           }
-      ) 
+      )  
       .catch((err) => { 
         console.log(err.message); 
       });

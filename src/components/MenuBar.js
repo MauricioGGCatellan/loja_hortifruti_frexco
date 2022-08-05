@@ -13,7 +13,7 @@ import ShoppingCart from '@mui/icons-material/ShoppingCart';
 //import MenuItem from '@mui/material/MenuItem';
 //import AdbIcon from '@mui/icons-material/Adb';
 
-const pages = ['Produtos'];
+const pages = ['Products'];
 
 const MenuBar = () => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -65,7 +65,7 @@ const MenuBar = () => {
           </Box>
 
           <Box sx={{ flexGrow: 0 }}>
-            <Tooltip title="Ver carrinho">
+            <Tooltip title="Check cart">
               <IconButton onClick={handleOpenBuyout} sx={{ p: 0 }}>
                 <ShoppingCart sx = {{color: 'Green'}}/>
               </IconButton>

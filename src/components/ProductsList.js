@@ -1,21 +1,22 @@
 import ProductItem from './ProductItem';
+import Grid from '@mui/material/Grid';
 
 function ProductsList(props) {
     console.log(props.fruits);
 
   return (  
-     <div className="fruits-container"> 
+    <Grid container columnSpacing={6} justifyContent="space-around">
      
     {props.fruits.map((fruit) => { 
         console.log(fruit); 
        return (
-        <div>
+        <Grid item>
             <ProductItem name = {fruit.name} family = {fruit.family}
-             order = {fruit.order} genus = {fruit.genus}/> 
-        </div>
+             order = {fruit.order} genus = {fruit.genus} nutritions = {fruit.nutritions}/> 
+        </Grid>
        );
     })}
-    </div>
+    </Grid>
   );
 }
 
