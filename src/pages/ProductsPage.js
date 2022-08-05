@@ -21,15 +21,10 @@ function ProductsPage() {
     }, []);
 
 
-
-    
   return (
     <div> 
-      <MenuBar></MenuBar>
       <ProductsList fruits = {fruits}></ProductsList>
     </div>
-    //<header><div> Hortifruti Frexco </div> </header>
-    //<Button variant="contained"> Olá Mundo</Button>
   );
 }
 

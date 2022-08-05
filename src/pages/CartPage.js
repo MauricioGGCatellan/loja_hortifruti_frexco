@@ -1,10 +1,11 @@
-import MenuBar from '../components/MenuBar'
+import CartList from '../components/CartList'
+import CartItem from '../components/CartItem'
+
 
 function CartPage() {
   return (
-    <MenuBar></MenuBar>,
-    <div>
-        <p>Sou um carrinho</p>
+    <div> 
+      <CartItem/>
     </div>
     //<header><div> Hortifruti Frexco </div> </header>
     //<Button variant="contained"> Olá Mundo</Button>

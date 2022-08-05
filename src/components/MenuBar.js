@@ -4,29 +4,28 @@ import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
-//import Menu from '@mui/material/Menu';
-//import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import ShoppingCart from '@mui/icons-material/ShoppingCart';
-//import MenuItem from '@mui/material/MenuItem';
-//import AdbIcon from '@mui/icons-material/Adb';
+import { useNavigate } from 'react-router-dom';
+
 
 const pages = ['Products'];
 
 const MenuBar = () => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
-
-
+ 
+  let navigate = useNavigate();
   const handleOpenBuyout = (event) => {
-    //Ir para a pagina do carrinho
+    //Go to cart page
+    
     setAnchorElUser(event.currentTarget);
   };
 
   const handleCloseNavMenu = () => {
-    //Ir para a pagina inicial
+    //Go to product (home) page
     setAnchorElNav(null);
   };
 
@@ -56,17 +55,17 @@ const MenuBar = () => {
             {pages.map((page) => (
               <Button
                 key={page}
-                onClick={handleCloseNavMenu}
+                onClick={() => {navigate("/")}}
                 sx={{ my: 2, color: 'Green', display: 'block' }}
               >
                 {page}
               </Button>
             ))}
-          </Box>
+          </Box> 
 
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Check cart">
-              <IconButton onClick={handleOpenBuyout} sx={{ p: 0 }}>
+              <IconButton onClick={() => {navigate("/cart")}} sx={{ p: 0 }}>
                 <ShoppingCart sx = {{color: 'Green'}}/>
               </IconButton>
             </Tooltip>
