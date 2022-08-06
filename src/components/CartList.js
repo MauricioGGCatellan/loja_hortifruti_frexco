@@ -1,3 +1,5 @@
+//Lists cart items. Each item found in storage is represented by a component CartItem (src/components/CartItem.js)
+
 import CartItem from './CartItem';
 
 

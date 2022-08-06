@@ -1,3 +1,8 @@
+//Buttons from product page, for interacting with a specific product.
+//'+' and '-' modify the quantity desired, without commiting a purchase.
+//'Add to cart' adds item with quantity specified to cart, while persisting the information in session storage. 
+//'Add to cart' also redirects to cart page. 
+
 import * as React from 'react';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';

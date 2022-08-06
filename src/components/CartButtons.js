@@ -1,17 +1,19 @@
+//Buttons from cart page.
+//'+' and '-' modify quantity bought of a item, while persisting the information through session storage.
+//'Remove item from cart' deletes a product entry completely and refreshes the page.
+
 import * as React from 'react';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
-import { useNavigate } from 'react-router-dom';
 
-
-class StatefulCartButtons extends React.Component{
+class CartButtons extends React.Component{ 
     constructor(props){
         let cart = JSON.parse(window.sessionStorage.getItem('cart'));
         super(props);
         this.state = {amount: cart[props.name]};
-    }
+    } 
 
     render(){
         return(
@@ -70,11 +72,6 @@ class StatefulCartButtons extends React.Component{
         </Grid>
         );
     } 
-}
-
-function CartButtons (props){
-    let navigate = useNavigate();
-    return <StatefulCartButtons name = {props.name} navigate = {navigate}/>
 }
  
 export default CartButtons;

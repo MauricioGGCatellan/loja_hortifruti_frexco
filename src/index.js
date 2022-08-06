@@ -1,3 +1,5 @@
+//Root of the web app. Defines routes and overall style.
+
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
@@ -24,9 +26,9 @@ root.render(
       </Routes>
     </BrowserRouter>
   </div>
-);
+); 
 
 reportWebVitals();
 
-
+ 
 

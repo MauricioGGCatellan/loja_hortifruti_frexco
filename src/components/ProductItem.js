@@ -1,3 +1,6 @@
+//Describes one specific product. Nutritional information is presented in a intern table.
+//Buttons for interaction come from component ProductButtons (src/components/ProductButtons.js)
+
 import * as React from 'react';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';

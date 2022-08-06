@@ -1,3 +1,6 @@
+//Top bar for all pages.
+//'Product' directs to product page, and cart symbol directs to cart page.
+
 import * as React from 'react';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';

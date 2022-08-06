@@ -1,3 +1,5 @@
+//Describes a cart item through a box, with buttons given by CartButtons (src/components/CartButtons.js)
+
 import * as React from 'react';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
