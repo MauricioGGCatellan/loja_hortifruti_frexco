@@ -18,6 +18,7 @@ const MenuBar = () => {
   const [anchorElUser, setAnchorElUser] = React.useState(null);
  
   let navigate = useNavigate();
+  
   const handleOpenBuyout = (event) => {
     //Go to cart page
     

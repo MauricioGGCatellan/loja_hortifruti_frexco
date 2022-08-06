@@ -1,23 +1,26 @@
 import CartItem from './CartItem';
-import Grid from '@mui/material/Grid';
+import cart from '../models/cart';
 
-function ProductsList(props) {
-    console.log(props.fruits);
 
+function CartList(props) { 
+  /*if(window.sessionStorage.getItem('cart')){
+    cart = JSON.parse(window.sessionStorage.getItem('cart'));
+  }*/
+ 
   return (  
-    <Grid container columnSpacing={6} justifyContent="space-around">
+    <div>
      
-    {props.fruits.map((fruit) => { 
-        console.log(fruit); 
+    {
+    Object.keys(cart).map(function(key, index) {  
+      console.log(key);
        return (
-        <Grid item>
-            <CartItem name = {fruit.name} family = {fruit.family}
-             order = {fruit.order} genus = {fruit.genus} nutritions = {fruit.nutritions}/> 
-        </Grid>
+        
+        <CartItem name = {key} quantity = {cart[key]}/>
+      
        );
     })}
-    </Grid>
+    </div> 
   );
 }
 
-export default ProductsList;
+export default CartList;

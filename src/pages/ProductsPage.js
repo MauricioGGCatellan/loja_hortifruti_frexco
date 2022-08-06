@@ -1,4 +1,3 @@
-import MenuBar from '../components/MenuBar'
 import React, { useState, useEffect }  from 'react';
 import ProductsList from '../components/ProductsList';
 
@@ -11,7 +10,8 @@ function ProductsPage() {
     fetch('https://serene-forest-52543.herokuapp.com/https://www.fruityvice.com/api/fruit/all')     
       .then(response => response.json()) 
       .then((data) => 
-            {console.log(data);
+            {
+            console.log(data);
             setFruits(data);
           }
       )  
@@ -22,10 +22,10 @@ function ProductsPage() {
 
 
   return (
-    <div> 
+    <div>  
       <ProductsList fruits = {fruits}></ProductsList>
     </div>
   );
-}
+} 
 
 export default ProductsPage;

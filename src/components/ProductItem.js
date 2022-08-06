@@ -1,6 +1,5 @@
 import * as React from 'react';
 import Box from '@mui/material/Box';
-import Button from '@mui/material/Button';
 import Grid from '@mui/material/Grid';
 import Divider from '@mui/material/Divider';
 import Typography from '@mui/material/Typography';
@@ -10,7 +9,7 @@ import TableCell from '@mui/material/TableCell';
 import TableContainer from '@mui/material/TableContainer';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
-
+import ProductButtons from './ProductButtons';
 
 function ProductItem(props) {
   return (
@@ -74,9 +73,7 @@ function ProductItem(props) {
       </Table>
     </TableContainer>
       </Box>
-      <Box sx={{ mt: 3, ml: 1, mb: 1 }}>
-        <Button>Add to cart</Button>
-      </Box>
+      <ProductButtons name = {props.name}/> 
     </Box>
   );
 }
