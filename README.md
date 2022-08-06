@@ -1,9 +1,12 @@
+# loja_hortifruti_frexco
+Aplicação web feita para processo seletivo para estágio em dev front-end na Frexco. Trata-se de um e-commerce de frutas básico com React.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
-
+ 
 In the project directory, you can run:
 
 ### `npm start`

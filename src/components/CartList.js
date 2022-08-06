@@ -1,11 +1,14 @@
 import CartItem from './CartItem';
-import cart from '../models/cart';
 
 
 function CartList(props) { 
-  /*if(window.sessionStorage.getItem('cart')){
-    cart = JSON.parse(window.sessionStorage.getItem('cart'));
-  }*/
+  let cart;
+
+  if(sessionStorage.getItem("cart") === null){
+      cart = {};
+  } else{
+      cart = JSON.parse(window.sessionStorage.getItem("cart"));
+  }
  
   return (  
     <div>
@@ -15,7 +18,7 @@ function CartList(props) {
       console.log(key);
        return (
         
-        <CartItem name = {key} quantity = {cart[key]}/>
+        <CartItem name = {key} />
       
        );
     })}

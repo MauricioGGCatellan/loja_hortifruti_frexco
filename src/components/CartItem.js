@@ -25,7 +25,7 @@ function CartItem(props) {
       <Divider variant="middle" />
       <Box sx={{ m: 2 }}> 
       </Box>
-      <CartButtons name = {props.name}/>
+      <CartButtons name = {props.name}/> 
       
     </Box>
   );

@@ -14,21 +14,7 @@ import { useNavigate } from 'react-router-dom';
 const pages = ['Products'];
 
 const MenuBar = () => {
-  const [anchorElNav, setAnchorElNav] = React.useState(null);
-  const [anchorElUser, setAnchorElUser] = React.useState(null);
- 
   let navigate = useNavigate();
-  
-  const handleOpenBuyout = (event) => {
-    //Go to cart page
-    
-    setAnchorElUser(event.currentTarget);
-  };
-
-  const handleCloseNavMenu = () => {
-    //Go to product (home) page
-    setAnchorElNav(null);
-  };
 
   return (
     <AppBar position="static" style={{ background: 'LightGreen' }}>

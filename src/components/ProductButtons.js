@@ -3,7 +3,6 @@ import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
-import cart from '../models/cart';
 import { useNavigate } from 'react-router-dom';
 
 class StatefulProductButtons extends React.Component{
@@ -45,17 +44,26 @@ class StatefulProductButtons extends React.Component{
                         +
                     </Button>
                 </Box>
-            </Grid>
+            </Grid> 
             <Grid item>
                 <Box sx={{ mt: 3, ml: 1, mb: 1, backgroundColor: "Gainsboro" }}>
                     <Button onClick={() => {
-
+                        let cart;
                         if(this.state.amount > 0){
+                        if(sessionStorage.getItem("cart") === null){
+                            cart = {};
+                        } else{ 
+                            cart = JSON.parse(window.sessionStorage.getItem("cart"));
+                        }
+
+                        
                         if(!cart[this.props.name]){ 
                             cart[this.props.name] = this.state.amount;
                         } else{
                             cart[this.props.name] += this.state.amount;
                         }
+
+                        window.sessionStorage.setItem('cart', JSON.stringify(cart));
                         this.props.navigate('/cart');
                         }
                      }
