@@ -1,5 +1,11 @@
-# loja_hortifruti_frexco
-Aplicação web feita para processo seletivo para estágio em dev front-end na Frexco. Trata-se de um e-commerce de frutas básico com React.
+# Loja Hortifruti Frexco
+Web application made as appliance for Frexco front-end dev internship role.
+The application is a simple fruits e-commerce implemented with Javascript and React. Only product and cart navigation and manipulation are here (no checkout implemented).
+ 
+## API Dependencies
+The API for obtaining the products was provided by Frexco: https://www.fruityvice.com/doc/index.html.
+Moreover, to bypass problems with the CORS header, a server with the solution provided in https://github.com/Rob--W/cors-anywhere/ was established through Heroku, in the following URL: https://serene-forest-52543.herokuapp.com/.
+
 
 # Getting Started with Create React App
 
@@ -21,6 +27,7 @@ You may also see any lint errors in the console.
 
 Launches the test runner in the interactive watch mode.\
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+No specific tests scripts were implemented for this project.
 
 ### `npm run build`
 
