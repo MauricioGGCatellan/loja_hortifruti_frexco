@@ -1,9 +1,8 @@
-# Loja Hortifruti Frexco
-Web application made as appliance for Frexco front-end dev internship role.
+# Loja Hortifruti 
 The application is a simple fruits e-commerce implemented with Javascript and React. Only product and cart navigation and manipulation are here (no checkout implemented).
  
 ## API Dependencies
-The API for obtaining the products was provided by Frexco: https://www.fruityvice.com/doc/index.html.
+The API for obtaining the products follows: https://www.fruityvice.com/doc/index.html.
 Moreover, to bypass problems with the CORS header, a server with the solution provided in https://github.com/Rob--W/cors-anywhere/ was established through Heroku, in the following URL: https://serene-forest-52543.herokuapp.com/.
 
 
